@@ -2,6 +2,10 @@
 # https://leetcode.com/problems/zigzag-conversion/
 
 def convert(s, num_rows)
+  if num_rows == 1
+    return
+  end
+
   # 文字列を格納するための配列を作成
   store = Array.new([s.size, num_rows].min, '')
 
@@ -25,6 +29,6 @@ def convert(s, num_rows)
   p store.join
 end
 
-convert('PAYPALISHIRING', 3)
+convert('', 1)
 
 # ans -> PAHNAPLSIIGYIR
